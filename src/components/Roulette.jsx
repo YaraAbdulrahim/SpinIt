@@ -30,6 +30,7 @@ function Roulette() {
 
       {/* Wheel and result display */}
       <div className="md:mr-28 mr-6 flex flex-col items-center">
+      {data.length > 0 &&
         <Wheel
           mustStartSpinning={mustSpin}
           prizeNumber={PrizeNumber}
@@ -42,16 +43,23 @@ function Roulette() {
           outerBorderColor="white"
           radiusLineWidth={4}
         />
+      }
 
         {/* Spin button */}
+
+
+        {data.length > 0 &&
         <button
+              
+
           onClick={spinWheel}
           disabled={data.length === 0} // can't spin if data is empty
           className={`mt-6 rounded-3xl px-6 py-3 text-white font-bold shadow-md
             ${data.length === 0 ? "bg-gray-400 cursor-not-allowed" : "bg-blue-900 hover:bg-blue-800"}`}
         >
           Spin
-        </button>
+          
+          </button> }
 
         {/* Display result after spinning */}
         {hasSpun && !mustSpin && data.length > 0 && (

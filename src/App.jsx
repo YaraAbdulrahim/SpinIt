@@ -6,7 +6,7 @@ function App() {
 
   return (
 
-<div className="bg-gradient-to-r from-white via-blue-100 to-white min-h-screen w-full flex items-center justify-center">
+<div className="bg-gradient-to-r from-white via-blue-200 to-white min-h-screen w-full flex items-center justify-center">
 
 <Roulette/>
 </div>
